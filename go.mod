@@ -1,4 +1,4 @@
-module github.com/ifukazoo/gptalkbot
+module github.com/ifukazoo/gptalk
 
 go 1.19
 
