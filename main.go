@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"path/filepath"
 
 	"github.com/joho/godotenv"
 	openai "github.com/sashabaranov/go-openai"
@@ -13,7 +14,9 @@ import (
 
 func main() {
 
-	err := godotenv.Load(".env")
+	path := os.Getenv("HOME")
+
+	err := godotenv.Load(filepath.Join(path, ".env"))
 	if err != nil {
 		log.Fatal(err)
 	}
