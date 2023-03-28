@@ -53,7 +53,7 @@ func response(key string, dialog []openai.ChatCompletionMessage) (string, int, e
 	ctx := context.Background()
 	resp, err := client.CreateChatCompletion(ctx,
 		openai.ChatCompletionRequest{
-			Model:    openai.GPT3Dot5Turbo,
+			Model:    openai.GPT432K,
 			Messages: dialog,
 		},
 	)
